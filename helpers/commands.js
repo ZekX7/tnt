@@ -9,8 +9,8 @@ startMsg = async (ctx) =>
         reply_markup:{
             inline_keyboard: [
                 [
-                    {text: '🧑‍Owner', url:'https://t.me/apexxdevs'},
-                    {text: '🌟 Source Code 🌟', url:'https://github.com/JinsoRaj/TorrentConverter'}
+                    {text: 'Owner', url:'https://t.me/zekxtreme'},
+                    {text: 'Source Code 🌟', url:'https://github.com/JinsoRaj/TorrentConverter'}
                 ]
             ]
         } 
@@ -29,7 +29,7 @@ helpMsg = async (ctx) =>
 
 aboutMsg = async (ctx) =>
 {
-    ctx.reply(`Owner: @ApexxDevs\nFramework: <a href="https://grammy.dev">grammY</a> �`,
+    ctx.reply(`Owner: @Zekxtreme\nFramework: <a href="https://grammy.dev">grammY</a> �`,
     {
         parse_mode: "HTML",
         disable_web_page_preview: true,
