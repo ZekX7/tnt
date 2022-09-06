@@ -1,7 +1,8 @@
 // A simple magnet->torrent & torrent->magnet converter Telegram bot.
 // (c) JinsoRaj : https://github.com/JinsoRaj/TorrentConverter
 // ToDo: DB, itorrents, Logger, Groups /cmd@bot magnetlink support.
-
+const express = require("express")
+const app = express()
 require('dotenv').config();
 const { startMsg, helpMsg, aboutMsg } = require('./helpers/commands');
 const { getTorrentFile, getMagnetLink } = require('./helpers/utils');
@@ -64,3 +65,16 @@ bot.catch((err) => {
 
 // Start bot
 bot.start();
+app.use("/", (req, res, next) => {
+    res.send("This is the express server")
+})
+  
+// Handling GET /hello request
+app.get("/hello", (req, res, next) => {
+    res.send("This is the hello response");
+})
+  
+// Server setup
+app.listen(3000, () => {
+    console.log("Server is Running")
+})
